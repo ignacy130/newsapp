@@ -1,0 +1,46 @@
+NEWSAPP - MODEL
+
+entity
+- guid id
+- Date createdAt
+- Date modifiedAt
+- bool deleted
+
+user : entity
+- mail <string>
+- login <string>
+- password <hash>
+- newses <list<news>>
+_____________________________________
+- hashtags <list<int (fk)>>
+- observers <user>
+- observating <user>
+- fb account
+- g+ account
+- twitter
+
+news : entity
+- author (user_id) <FK>
+- photo <?>
+- header <string>
+- bulletPoints <list<string>>
+- votedFor <user>
+- votedAgainst <user>
+______________________________________
+- reported (FK?) <guid>
+- hashtags <hashtag>
+- location <gps>
+- comments <list<comment>>
+- categories <string>
+- drastic <bool>
+
+___________________________________________________________
+comment
+- user (user_id) <FK?>
+- content <string>
+- date <datetime>
+- news <FK>
+
+hashtag
+- id
+- content
