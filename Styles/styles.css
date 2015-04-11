@@ -1,0 +1,39 @@
+/* GLOBAL */
+
+input{
+    border-radius: 0;
+    border: 1px solid #ddd;
+    margin: 5px 0;
+    padding: 3px;
+}
+
+/* EDITOR */
+.editor{
+    max-width: 500px;
+    float: left;
+    padding: 5px;
+}
+
+.editor > *{
+    width: 100%;
+}
+
+.editor #addHeader{
+    display: block;
+}
+
+.editor #addPhoto{
+    height: 100px;
+    color: #bbb;
+    background: #444;
+}
+
+.add-bullets{
+    display: block;
+}
+
+.add-bullets li{
+    list-style-type: square;
+    margin-left: 20px;
+}
+

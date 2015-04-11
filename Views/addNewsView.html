@@ -1,0 +1,18 @@
+<body>
+    <div class="editor">
+        <div id="addPhoto">
+            + Photo
+        </div>
+
+        <form id="addNews">
+            <input type="text" name="text" placeholder="News header..." />
+
+            <div class="add-bullets">
+                <ul>
+                    {{#each bullets}} {{> bulletEdit}} {{/each}}
+                </ul>
+            </div>
+            <input type="button" value="Report it!" />
+        </form>
+    </div>
+</body>
