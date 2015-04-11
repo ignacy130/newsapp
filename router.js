@@ -6,4 +6,6 @@ Router.configure({
 });
 Router.map(function(){
     this.route('NewsView', {path:'/'});
+    this.route('AddNewsView', {path:'/AddNewsView'});
+    this.route('login', {path:'/login'});
 })
