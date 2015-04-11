@@ -1,4 +1,10 @@
 <template name="NewsView">
     <h1>NewsView</h1>
-
+    <div>
+        {{#each allNewses}}
+        <div> {{header}}
+        <br/>
+            {{bullets}}
+        </div><br/><br/><br/>{{/each}}
+    </div>
 </template>
