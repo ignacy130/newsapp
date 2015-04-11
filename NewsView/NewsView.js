@@ -1,21 +1,12 @@
 /**
  * Created by dabler on 11/04/15.
  */
-NewsDataBase = new Mongo.Collection("newsDataBase");
-
 if (Meteor.isClient) {
-    // This code only runs on the client
-    //Template.body.helpers({
-    //    newses: function () {
-    //        // Show newest tasks first
-    //        return NewsDataBase.find({}, {sort: {createdAt: -1}});
-    //    }
-    //});
-    Template.body.helpers({
+    Template.NewsView.helpers({
         newses: [
-            { header: "Wojna na bliskim wschodzie." },
-            { header: "Odkryto nowe złoża ropy na morzu północnym." },
-            { header: "Rosja atakuje polskę" }
+            { image: "http://cdn.silodrome.com/wp-content/uploads/2013/01/Lamborghini-Miura-9.jpg", header: "Wojna na bliskim wschodzie." },
+            { image: "/Users/dabler/Project/WWW/Meteor/NewsApp/Assets/11118427_832951006740441_1932364961_n.jpg", header: "Odkryto nowe złoża ropy na morzu północnym." },
+            { image: "/Users/dabler/Project/WWW/Meteor/NewsApp/Assets/11118427_832951006740441_1932364961_n.jpg", header: "Rosja atakuje polskę" }
         ]
     });
 }
