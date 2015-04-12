@@ -11,6 +11,8 @@
     <li>
         <div class="card swipeitem">
             <div class="card-image" style="background-image:url({{getPhoto photo}})">
+                <input id="itemId" name="id" type="hidden" value="{{_id}}" />
+                {{> voteBadge}}
                 <div class="username">
                     {{currentUser.username}}
                 </div>

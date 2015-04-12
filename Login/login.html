@@ -1,3 +1,12 @@
 <template name="login">
-{{> loginButtons}}
+    <form id="login-form">
+        <h2>Lubl<span class='semi-opaque'>((</span>I<span class='semi-opaque'>))</span>nfo</h2>
+        <div id="login-holder">
+            <input type="text" id="login-username" placeholder="nazwa użytkownika" />
+
+            <input type="password" id="login-password" placeholder="hasło" />
+
+            <input type="submit" id="loginButton" class="actionButton" value="Zaloguj się >" />
+        </div>
+    </form>
 </template>

@@ -1,27 +1,49 @@
 /* GLOBAL */
 
+body{
+    font-family: Georgia, serif;
+    height: 100vh;
+}
+
 input{
     border-radius: 0;
     border: 1px solid #ddd;
-    margin: 5px 0;
+    margin: 0 auto;
     padding: 3px;
+}
+
+#user-header{
+    background: orangered;
+    color: #fff;
+    font-weight: bold;
+    font-family: sans-serif;
+    padding: 1vw;
+    text-align: right;
+}
+
+#user-header a{
+    text-decoration: none;
 }
 
 /* EDITOR */
 .editor{
-    
+    background-image: url("Images/concrete_seamless.png");
+    height: 100vh;
 }
 
 .editor #addHeader{
     display: block;
-    font-size: 1.2em;
-    margin: 1vh;
+    font-size: 1.4em;
+    margin: 1vh auto;
+    width: 97%;
+    box-sizing: border-box;
 }
 
 .editor #addPhoto{
     height: 20vh;
     color: #bbb;
-    background: #444;
+    background-image: url("Images/city.jpg");
+    background-size: cover;
     text-align: center;
 }
 
@@ -29,6 +51,7 @@ input{
     border: none;
     margin-top: 6vh;
     margin-left: 10vw;
+    
 }
 
 .add-bullets{
@@ -40,18 +63,48 @@ input{
     margin-left: 20px;
 }
 
+.add-bullets li input{
+    font-size: 1.3em;
+    width: 97%;
+    box-sizing: border-box;
+    margin: 1vh auto;
+}
+
+.actionButton{
+    background-color: orangered;
+    color: white;
+    padding: 8px 0 8px 0;
+    font-weight: bold;
+    border: none;
+}
+
 .mainActionButton{
     width: 100%;
-    font-family: Georgia, serif;
     background-color: orangered;
     position: fixed;
     display: block;
     bottom: 0;
     text-align: center;
     text-decoration: none;
-    color: white;
-    padding: 8px 0 8px 0;
-    font-weight: bold;
     font-size: 5vh;
-    border: none;
+    font-family: serif;
+}
+
+.vote-badge{
+    margin: 5px;
+    font-size: 1em;
+    border-radius: 1000px;
+    float: right;
+    height: 40px;
+    width: 40px;
+    padding: 0;
+}
+
+.vote-text{
+    position: absolute;
+    top: 15px;
+    display: block;
+    margin: 0 auto;
+    width: 40px;
+    text-align: center;
 }

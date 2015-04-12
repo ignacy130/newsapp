@@ -34,8 +34,8 @@ Meteor.methods({
             throw new Meteor.Error("not-authorized");
         }
 
-        var votedFor = [];
-        var votedAgainst = [];
+        var votedFor = [Meteor.userId()];
+        var votedAgainst = [Meteor.userId()];
 
         Newses.insert({
             author: Meteor.userId(),
