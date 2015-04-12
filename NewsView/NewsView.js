@@ -32,6 +32,14 @@ if (Meteor.isClient) {
             var key = event.target.children[1].value;
             Session.set('storedValue', key);
             Router.go('/NewsDetails/'+key);
+        },
+
+        'click .DeleteItem': function (event, template) {
+            console.log(event.target);
+            var key = event.target.children[0].value;
+            console.log(key);
+            Session.set('cardToDelete', key);
+            Router.go('/DeleteConfirmationView');
         }
     });
     
