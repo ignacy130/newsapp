@@ -27,15 +27,16 @@ if (Meteor.isClient) {
         }
     });
 
-//    Template.NewsView.events({
-//        'click .myItem': function (event, template) {
-//            var newsId = e.target.children[0].value;
-//            
-//        },
-//    });
+    Template.NewsView.events({
+        'click .myItem': function (event, template) {
+            var key = event.target.children[1].value;
+            Session.set('storedValue', key);
+            Router.go('/NewsDetails/'+key);
+        }
+    });
     
     Template.NewsView.gestures({
-        'swipeleft .myItem': function (e, t) {
+        'swipeleft .swipeitem': function (e, t) {
             e.preventDefault();
             if(Meteor.userId() != null) {
                 if(Newses.find({$or: [{votedFor: Meteor.userId()}, {votedAgainst: Meteor.userId()}]}).count()==0)
@@ -47,23 +48,29 @@ if (Meteor.isClient) {
                 else {console.log("You have voted already!");}
             }
         },
-        'swiperight .myItem': function (e, t) {
+        'swiperight .swipeitem': function (e, t) {
             e.preventDefault();
             if(Meteor.userId() != null) {
                 var key = e.target.children[0].value;
+                console.log(e.target);
+                console.log(key);
                 console.log(Meteor.userId());
                 console.log(Newses.find({$or: [{votedFor: Meteor.userId()}, {votedAgainst: Meteor.userId()}]}).count());
                 var keys = Newses.find({_id: key});
                 var vfor = keys.votedFor;
                 var vagainst = keys.votedAgainst;
+                console.log(vfor.count);
+                console.log(vagainst.count);
                 var vforContains = false;
                 if(!(vfor === null || typeof vfor === 'undefined') && indexOf.call(vfor,key)>-1)
                 {
+                    console.log("vforContains");
                     vforContains = true;
                 }
                 var vagainstContains = false;
                 if(!(vagainst === null || typeof vagainst === 'undefined') && indexOf.call(vagainst, key)>-1)
                 {
+                    console.log("vagainstContains");
                     vagainstContains = true;
                 }
                 console.log(vforContains);
