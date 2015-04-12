@@ -1,18 +1,19 @@
 /**
  * Created by dabler on 11/04/15.
  */
-Handlebars.registerHelper('getPhoto', function () {
-    var ph = Photos.findOne(this.photo);
-    console.log(this.photo);
-    console.log(ph);
-    return ph.url();
-});
+
 
 if (Meteor.isClient) {
+    Handlebars.registerHelper('getPhoto', function () {
+        var ph = Photos.findOne(this.photo);
+        return ph.url();
+    });
+
+    Template.registerHelper('formatDate', function (date) {
+        return moment(date).format('hh:mm, DD-MM-YYYY');
+    });
+
     //    var p = Meteor.subscribe('newsesWithPhotos');
-
-
-
     Template.NewsView.helpers({
         allNewses: function () {
             return Newses.find({}, {
@@ -26,6 +27,13 @@ if (Meteor.isClient) {
         }
     });
 
+//    Template.NewsView.events({
+//        'click .myItem': function (event, template) {
+//            var newsId = e.target.children[0].value;
+//            
+//        },
+//    });
+    
     Template.NewsView.gestures({
         'swipeleft .myItem': function (e, t) {
             e.preventDefault();

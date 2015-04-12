@@ -21,8 +21,14 @@ if (Meteor.isClient) {
 
         "submit #addNews": function (event) {
             // This function is called when the new task form is submitted
-            var file = event.target.photo.files[0];
-            var photo = Photos.insert(file);
+            var photo = {
+                "_id": ""
+            };
+
+            if (event.target.photo.files.count > 0) {
+                var file = event.target.photo.files[0];
+                var photo = Photos.insert(file);
+            }
 
             var text = event.target.text.value;
             var b1 = event.target.b1.value;
@@ -38,7 +44,7 @@ if (Meteor.isClient) {
 
             // Clear form
             event.target.text.value = "";
-
+            Router.go('/');
             // Prevent default form submit
             return false;
         }
