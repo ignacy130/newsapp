@@ -1,24 +1,31 @@
 <template name="NewsView">
     <div class="container myItem">
         <ul>
-            {{#each allNewses}}
-                {{> news}}
-            {{/each}}
+            {{#each allNewses}} {{> news}} {{/each}}
         </ul>
     </div>
+    {{> newNewsButton}}
 </template>
 
 <template name="news">
     <li>
         <div class="card swipeitem">
             <div class="card-image" style="background-image:url({{getPhoto photo}})">
-                <input id="itemId" name="id" type="hidden" value="{{_id}}"/>
-                <div class="banner"></div>
-                <h2>{{header}}</h2>
+                <div class="username">
+                    {{currentUser.username}}
+                </div>
+
+                <input id="itemId" name="id" type="hidden" value="{{_id}}" />
+                <div class="news-info">
+                    <small>{{formatDate createdAt}}</small>
+                    <h2>{{header}}</h2>
+                </div>
             </div>
+            <!--
             <p>{{#each bullets}}
                 {{this}}
             {{/each}}</p>
+-->
         </div>
     </li>
 </template>

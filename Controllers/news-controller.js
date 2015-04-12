@@ -9,6 +9,8 @@
 
 Newses = new Mongo.Collection("newses");
 
+
+
 Meteor.methods({
     allNewses: function () {
         return Newses.find({});
@@ -37,6 +39,7 @@ Meteor.methods({
 
         Newses.insert({
             author: Meteor.userId(),
+            nick: Meteor.user().username,
             createdAt: new Date(),
             header: header,
             photo: photo,

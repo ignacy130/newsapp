@@ -1,18 +1,19 @@
 /**
  * Created by dabler on 11/04/15.
  */
-Handlebars.registerHelper('getPhoto', function () {
-    var ph = Photos.findOne(this.photo);
-    console.log(this.photo);
-    console.log(ph);
-    return ph.url();
-});
+
 
 if (Meteor.isClient) {
+    Handlebars.registerHelper('getPhoto', function () {
+        var ph = Photos.findOne(this.photo);
+        return ph.url();
+    });
+
+    Template.registerHelper('formatDate', function (date) {
+        return moment(date).format('hh:mm, DD-MM-YYYY');
+    });
+
     //    var p = Meteor.subscribe('newsesWithPhotos');
-
-
-
     Template.NewsView.helpers({
         allNewses: function () {
             return Newses.find({}, {
@@ -26,12 +27,24 @@ if (Meteor.isClient) {
         }
     });
 
+//    Template.NewsView.events({
+//        'click .myItem': function (event, template) {
+//            var newsId = e.target.children[0].value;
+//            
+//        },
+//    });
+    
     Template.NewsView.gestures({
         'swipeleft .myItem': function (e, t) {
             e.preventDefault();
-            if(Meteor.userId() != null) {
-                if(Newses.find({$or: [{votedFor: Meteor.userId()}, {votedAgainst: Meteor.userId()}]}).count()==0)
-                {
+            if (Meteor.userId() != null) {
+                if (Newses.find({
+                        $or: [{
+                            votedFor: Meteor.userId()
+                        }, {
+                            votedAgainst: Meteor.userId()
+                        }]
+                    }).count() == 0) {
                     console.log(e.target.children[0].value);
                     //Newses.update({ _id: id },{ $push: { votedAgainst: id }});
                 }
@@ -40,7 +53,7 @@ if (Meteor.isClient) {
         },
         'swiperight .myItem': function (e, t) {
             e.preventDefault();
-            var currentUserId = Meteor.user().userId
+            var currentUserId = Meteor.user().userId;
             if (Newses.find({
                     $or: [{
                         votedFor: currentUserId
