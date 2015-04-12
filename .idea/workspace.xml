@@ -24,11 +24,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="NewsView.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="NewsView.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NewsView/NewsView.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3327869" vertical-offset="247" max-vertical-offset="1860">
-              <caret line="30" column="19" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="307" max-vertical-offset="1860">
+              <caret line="50" column="17" selection-start-line="50" selection-start-column="17" selection-end-line="50" selection-end-column="17" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -46,12 +46,34 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DeleteConfirmationView.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="DeleteConfirmationView.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DeleteConfirmationView/DeleteConfirmationView.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390">
-              <caret line="4" column="45" selection-start-line="4" selection-start-column="45" selection-end-line="4" selection-end-column="45" />
+            <state vertical-scroll-proportion="0.29508197" vertical-offset="0" max-vertical-offset="610">
+              <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="images-controller.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Controllers/images-controller.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="165">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="news-controller.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Controllers/news-controller.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1110">
+              <caret line="47" column="38" selection-start-line="46" selection-start-column="13" selection-end-line="47" selection-end-column="38" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -64,16 +86,6 @@
               <folding>
                 <element signature="e#0#41#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="addNewsView.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AddNewsView/addNewsView.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.625" vertical-offset="0" max-vertical-offset="630">
-              <caret line="1" column="24" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -103,16 +115,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="270">
               <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="addNewsView.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AddNewsView/addNewsView.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="245" max-vertical-offset="855">
-              <caret line="46" column="16" selection-start-line="46" selection-start-column="12" selection-end-line="46" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -149,11 +151,11 @@
         <option value="$PROJECT_DIR$/Controllers/news-controller.js" />
         <option value="$PROJECT_DIR$/NewsDetails/NewsDetails.html" />
         <option value="$PROJECT_DIR$/NewsDetails/NewsDetails.js" />
-        <option value="$PROJECT_DIR$/DeleteConfirmationView/DeleteConfirmationView.js" />
         <option value="$PROJECT_DIR$/router.js" />
         <option value="$PROJECT_DIR$/NewsView/NewsView.html" />
         <option value="$PROJECT_DIR$/NewsView/NewsView.js" />
         <option value="$PROJECT_DIR$/DeleteConfirmationView/DeleteConfirmationView.html" />
+        <option value="$PROJECT_DIR$/DeleteConfirmationView/DeleteConfirmationView.js" />
       </list>
     </option>
   </component>
@@ -755,24 +757,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Controllers/news-controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1110">
-          <caret line="47" column="38" selection-start-line="46" selection-start-column="13" selection-end-line="47" selection-end-column="38" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Controllers/images-controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="355">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Controllers/hello.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="400">
@@ -823,26 +807,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DeleteConfirmationView/DeleteConfirmationView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390">
-          <caret line="4" column="45" selection-start-line="4" selection-start-column="45" selection-end-line="4" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/NewsDetails/NewsDetails.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="270">
           <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NewsDetails/NewsDetails.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.625" vertical-offset="0" max-vertical-offset="285">
-          <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
           <folding />
         </state>
       </provider>
@@ -857,11 +825,45 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/NewsView/NewsView.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3327869" vertical-offset="247" max-vertical-offset="1860">
-          <caret line="30" column="19" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="307" max-vertical-offset="1860">
+          <caret line="50" column="17" selection-start-line="50" selection-start-column="17" selection-end-line="50" selection-end-column="17" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NewsDetails/NewsDetails.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.625" vertical-offset="0" max-vertical-offset="285">
+          <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controllers/images-controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="355">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controllers/news-controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1110">
+          <caret line="47" column="38" selection-start-line="46" selection-start-column="13" selection-end-line="47" selection-end-column="38" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DeleteConfirmationView/DeleteConfirmationView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.29508197" vertical-offset="0" max-vertical-offset="610">
+          <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>

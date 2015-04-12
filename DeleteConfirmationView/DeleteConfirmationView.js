@@ -8,11 +8,11 @@ if (Meteor.isClient) {
         }
     });
 
-    Template.NewsView.events({
+    Template.DeleteConfirmationView.events({
         'click .acceptDelete': function (event, template) {
             var param = Session.get('cardToDelete')
             console.log(param);
-            db.products.remove( { _id: param } )
+            Newses.remove( { _id: param } )
             Router.go('/');
         },
 
