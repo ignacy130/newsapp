@@ -29,11 +29,10 @@ if (Meteor.isClient) {
     Template.NewsView.gestures({
         'swipeleft .myItem': function (e, t) {
             e.preventDefault();
-            console.log(e.target);
             if(Meteor.userId() != null) {
                 if(Newses.find({$or: [{votedFor: Meteor.userId()}, {votedAgainst: Meteor.userId()}]}).count()==0)
                 {
-                    console.log(e.target.id.valueOf());
+                    console.log(e.target.children[0].value);
                     //Newses.update({ _id: id },{ $push: { votedAgainst: id }});
                 }
             }
