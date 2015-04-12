@@ -11,4 +11,7 @@ iron:router
 accounts-ui
 accounts-password
 chriswessels:hammer
+cfs:standard-packages
+cfs:filesystem
 mrt:publish-with-relations
+cfs:access-point

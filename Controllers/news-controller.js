@@ -13,7 +13,7 @@ Meteor.methods({
     allNewses: function () {
         return Newses.find({});
     },
-    
+
     userNewses: function (userId) {
         return Newses.find({
             userId: {
@@ -25,7 +25,7 @@ Meteor.methods({
             }
         });
     },
-    
+
     addNews: function (header, photo, bullets) {
         //is user logged check
         if (!Meteor.userId()) {
@@ -50,3 +50,16 @@ Meteor.methods({
         Newses.remove(taskId);
     }
 });
+
+//Meteor.publish('newsesWithPhotos', function() {
+//  // first, get the top 30 posts
+//  var topPostsCursor = Newses.find({}, {sort: {createdAt: -1}});
+//  // then extract those posts' userIds
+//  var userIds = topPostsCursor.map(function(p) { return p.photo });
+//
+//  // then return an array containing both the posts, and their corresponding comments
+//  return [
+//    topPostsCursor,
+//    Photos.find({_id: {$in: userIds}})
+//  ];
+//});
