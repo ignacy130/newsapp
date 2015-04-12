@@ -26,7 +26,6 @@ if (Meteor.isClient) {
             var b6 = event.target.b6.value;
             var bullets = [b1,b2,b3,b4,b5,b6];
 
-
             Meteor.call("addNews", text, "photo", bullets);
 
             // Clear form

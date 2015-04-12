@@ -1,5 +1,5 @@
 <template name="NewsView">
-    <div class="container">
+    <div class="container myItem">
         <ul>
             {{#each allNewses}}
                 {{> news}}
@@ -10,12 +10,14 @@
 
 <template name="news">
     <li>
-        <div class="card">
+        <div class="card swipeitem">
             <div class="card-image" style="background-image:url({{image}})">
                 <div class="banner"></div>
                 <h2>{{header}}</h2>
             </div>
-            <p></p>
+            <p>{{#each bullets}}
+                {{this}}
+            {{/each}}</p>
         </div>
     </li>
 </template>

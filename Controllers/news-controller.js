@@ -32,12 +32,17 @@ Meteor.methods({
             throw new Meteor.Error("not-authorized");
         }
 
+        var votedFor = [];
+        var votedAgainst = [];
+
         Newses.insert({
             author: Meteor.userId(),
             createdAt: new Date(),
             header: header,
             photo: photo,
-            bullets: bullets
+            bullets: bullets,
+            votedFor: votedFor,
+            votedAgainst: votedAgainst
         });
     },
 
