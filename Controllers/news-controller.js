@@ -1,15 +1,15 @@
 // MODEL
 // NEWS : ENTITY
 // userId <FK>
-// photo <?>
+// photo <id>
 // header <string>
 // bullets <list<string>>
 // votedFor <user>
 // votedAgainst <user>
+// tags <list<id>>
 
 Newses = new Mongo.Collection("newses");
-
-
+Tags = new Mongo.Collection("tags");
 
 Meteor.methods({
     allNewses: function () {
@@ -28,7 +28,14 @@ Meteor.methods({
         });
     },
 
-    addNews: function (header, photo, bullets) {
+    /**
+    * Adds news to news collection
+    * @param header - title of news
+    * @param photo - id of news photo
+    * @param bullets - string array of news bullet points
+    * @param tags - array of tags ids
+    */
+    addNews: function (header, photoId, bullets, tagsIds) {
         //is user logged check
         if (!Meteor.userId()) {
             throw new Meteor.Error("not-authorized");
@@ -42,27 +49,20 @@ Meteor.methods({
             nick: Meteor.user().username,
             createdAt: new Date(),
             header: header,
-            photo: photo,
+            photo: photoId,
             bullets: bullets,
             votedFor: votedFor,
-            votedAgainst: votedAgainst
+            votedAgainst: votedAgainst,
+            tags: tagsIds
         });
     },
 
+    /* Removes news  from collection
+    * @param - id of news to be removed
+    */
     deleteNews: function (newsId) {
         Newses.remove(taskId);
     }
 });
 
-//Meteor.publish('newsesWithPhotos', function() {
-//  // first, get the top 30 posts
-//  var topPostsCursor = Newses.find({}, {sort: {createdAt: -1}});
-//  // then extract those posts' userIds
-//  var userIds = topPostsCursor.map(function(p) { return p.photo });
-//
-//  // then return an array containing both the posts, and their corresponding comments
-//  return [
-//    topPostsCursor,
-//    Photos.find({_id: {$in: userIds}})
-//  ];
-//});
+
