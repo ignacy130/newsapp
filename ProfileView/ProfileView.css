@@ -1,0 +1,52 @@
+#profile-view {
+    float: left;
+    height: 100vh;
+    background: none repeat scroll 0% 0% #222;
+    color: #FFF;
+    width: 100%;
+    padding: 1vh;
+    box-sizing: padding-box;
+}
+
+#profile {
+    width: 100%;
+    float: left;
+}
+
+#profile > * {
+    display: inline-block;
+    float: left;
+    padding: 1vh 1vw;
+}
+
+#user-photo {
+    height: 10vh;
+    width: 10vh;
+    border: 1px solid #555;
+}
+
+#user-name {
+    padding: 3vh 0 0 3vh;
+}
+
+#user-links {
+    float: inherit;
+    width: 100%;
+}
+
+#user-links ul {
+    display: block;
+}
+
+#user-links ul li {
+    width: 100%;
+    padding: 2vh 0px;
+    border-bottom: 1px solid #555;
+}
+
+#user-links a {
+    text-decoration: none;
+    box-sizing: content-box;
+    display: block;
+    color: #FFF;
+}
