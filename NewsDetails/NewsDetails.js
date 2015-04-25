@@ -4,7 +4,7 @@
 if (Meteor.isClient) {
     Template.NewsDetails.helpers({
         news: function () {
-            var param = Session.get('storedValue')
+            var param = Session.get('cardToDelete')
             console.log(param);
             return Newses.findOne(param)
         },

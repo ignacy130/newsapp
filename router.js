@@ -10,4 +10,5 @@ Router.map(function(){
     this.route('AddNewsView', {path:'/AddNewsView'});
     this.route('login', {path:'/login'});
     this.route('NewsDetails', {path:'/NewsDetails/:someValue'});
+    this.route('DeleteConfirmationView', {path:'/DeleteConfirmationView'});
 })

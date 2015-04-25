@@ -40,12 +40,31 @@ if (Meteor.isClient) {
         }
     });
 
+
     //    Template.NewsView.events({
     //        'click .myItem': function (event, template) {
     //            var newsId = e.target.children[0].value;
     //            
     //        },
     //    });
+
+
+    Template.NewsView.events({
+        'click .myItem': function (event, template) {
+            var key = event.target.children[1].value;
+            Session.set('storedValue', key);
+            Router.go('/NewsDetails/'+key);
+        },
+
+        'click .DeleteItem': function (event, template) {
+            console.log(event.target);
+            var key = event.target.children[0].value;
+            console.log(key);
+            Session.set('cardToDelete', key);
+            Router.go('/DeleteConfirmationView');
+        }
+    });
+
 
     Template.NewsView.gestures({
         'swipeleft .swipeitem': function (e, t) {

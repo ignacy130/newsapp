@@ -22,11 +22,19 @@
                     <h2>{{header}}</h2>
                 </div>
             </div>
+
 <!--
             <p>{{#each bullets}}
                 {{this}}
             {{/each}}</p>
 -->
+
+            {{#if currentUser}}
+                 <div class="DeleteItem">
+                     <input id="itemId" name="id" type="hidden" value="{{_id}}"/>
+                    X</div>
+            {{/if}}
+
         </div>
     </li>
 </template>
