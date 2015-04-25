@@ -5,7 +5,8 @@ Router.configure({
     layoutTemplate:'layout'
 });
 Router.map(function(){
-    this.route('NewsView', {path:'/'});
+    this.route('MainView', {path:'/'});
+    this.route('NewsView', {path:'/NewsView'});
     this.route('AddNewsView', {path:'/AddNewsView'});
     this.route('login', {path:'/login'});
     this.route('NewsDetails', {path:'/NewsDetails/:someValue'});

@@ -16,3 +16,4 @@ cfs:filesystem
 mrt:publish-with-relations
 cfs:access-point
 momentjs:moment
+shcherbin:slickjs
